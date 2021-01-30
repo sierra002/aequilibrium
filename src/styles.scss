@@ -1,18 +1,52 @@
 /* You can add global styles to this file, and also import other style files */
+$borderRadius: 6px;
+$clearCian: #2acaca;
+$darkCian: #229F9F;
+$clearGray: #d8d8d8;
+$inputGray: #707070;
+$error: #d41818;
+
 button {
   cursor: pointer;
-  background-color: #2acaca;
-  border-color: #4dc2c2;
-  border-style: solid;
+  background-color: $clearCian;
+  border: 1px solid $clearCian;
   padding: 10px;
-  border-radius: 6px;
+  border-radius: $borderRadius;
   color: white;
-  min-width: 100px;
-  margin: 0 10px;
+  min-width: 150px;
   &:focus {
     outline: none;
   }
   &:hover {
-    background-color: #229F9F;
+    background-color: $darkCian;
+    border-radius: $darkCian;
   }
+}
+
+*{
+  font-family: sans-serif;
+  div, input, div, label, span, button {
+    font-size: 16px;
+  }
+}
+
+input {
+  padding: 10px 5px;
+  border: 1px solid $clearGray;
+  border-radius: $borderRadius;
+  margin: 10px 0;
+  color: $inputGray;
+  &:focus {
+    outline: 1px auto $clearCian;
+  }
+}
+
+.pointer {
+  cursor: pointer;
+  margin: 10px 5px;
+}
+
+.error {
+  color: $error;
+  margin-bottom: 15px;
 }

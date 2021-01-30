@@ -6,4 +6,12 @@
     justify-content: center;
     align-items: center;
   }
+  router-outlet  {
+    padding: 15px;
+  }
+  .buttons{
+    > :first-child {
+      margin-right: 15px;
+    }
+  }
 }

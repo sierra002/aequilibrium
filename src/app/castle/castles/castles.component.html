@@ -1,1 +1,41 @@
-<p>castles works! </p>
+<div class="castlesComponent">
+  <div>
+    <div>
+      <div>
+        <label>
+          Please add your array
+          <input [formControl]="control">
+        </label>
+        <div *ngIf="control.errors" class="error">
+          <label>
+            {{control.errors.error}}
+          </label>
+        </div>
+        <button (click)="run()">
+          Run
+        </button>
+      </div>
+    </div>
+    <div>
+      <span>
+      Some examples:
+      </span>
+      <div *ngFor="let example of examples" (click)="setValue(example)" class="pointer example">
+        [{{example}}]
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="possibleCastles && (possibleCastles.peak || possibleCastles.valley) " class="results">
+    Looks like you are able to build
+    <div *ngIf="possibleCastles.peak">
+      {{possibleCastles.peak}} castle{{possibleCastles.peak > 1 ? 's': ''}} in a peak
+    </div>
+    <div *ngIf="possibleCastles.valley">
+      {{possibleCastles.valley}} castle{{possibleCastles.valley > 1 ? 's': ''}} in a valley
+    </div>
+  </div>
+  <div *ngIf="possibleCastles && !(possibleCastles.peak || possibleCastles.valley) " class="results">
+    We could not find a peak or valley to build your castle :(
+  </div>
+</div>
