@@ -54,7 +54,7 @@ describe('Transformer Service', () => {
         try {
           service.transformerVs(transformerC, transformerD);
         } catch (e) {
-          expect(e.message).toEqual('All competitors destroyed');
+          expect(e.message).toEqual('All competitors were destroyed');
         }
       });
     });

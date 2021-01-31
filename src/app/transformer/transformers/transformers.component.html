@@ -21,7 +21,7 @@
       </h3>
       <div>
         <label *ngFor="let autobot of autobots">
-          {{autobot.name}}
+          {{autobot.name + ' Rating: ' + autobot.overallRating()}}
         </label>
       </div>
     </div>
@@ -31,7 +31,7 @@
       </h3>
       <div>
         <label *ngFor="let decepticon of decepticons">
-          {{decepticon.name}}
+          {{decepticon.name + ' Rating: ' + decepticon.overallRating()}}
         </label>
       </div>
     </div>
@@ -45,7 +45,7 @@
     <div>
       <h3>Winner team: {{fightWinner}}</h3>
     </div>
-    <div>
+    <div *ngIf="!hideFightStats">
       <app-fight-result [title]="'Winners'" [results]="fightResults.winners">
       </app-fight-result>
       <app-fight-result [title]="'Losers'" [results]="fightResults.losers">
