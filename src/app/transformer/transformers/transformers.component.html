@@ -1,1 +1,59 @@
-<p>transformers works!</p>
+<div class="transformersComponent">
+  <h1>
+    Transformers Battle
+  </h1>
+  <img src="../../../assets/transformers.jpg">
+
+  <div class="transformerList">
+    <div>
+      <h3>
+        Transformers
+      </h3>
+
+      <button (click)="openModal()">
+        Add transformer
+      </button>
+    </div>
+
+    <div>
+      <h3>
+        Autobots
+      </h3>
+      <div>
+        <label *ngFor="let autobot of autobots">
+          {{autobot.name}}
+        </label>
+      </div>
+    </div>
+    <div>
+      <h3>
+        Decepticons
+      </h3>
+      <div>
+        <label *ngFor="let decepticon of decepticons">
+          {{decepticon.name}}
+        </label>
+      </div>
+    </div>
+  </div>
+  <button (click)="fight()">
+    fight
+  </button>
+
+  <div *ngIf="fightResults">
+    <h1>Results</h1>
+    <div>
+      <h3>Winner team: {{fightWinner}}</h3>
+    </div>
+    <div>
+      <app-fight-result [title]="'Winners'" [results]="fightResults.winners">
+      </app-fight-result>
+      <app-fight-result [title]="'Losers'" [results]="fightResults.losers">
+      </app-fight-result>
+      <app-fight-result [title]="'Did not fight'" [results]="fightResults.dontFight">
+      </app-fight-result>
+    </div>
+
+
+  </div>
+</div>

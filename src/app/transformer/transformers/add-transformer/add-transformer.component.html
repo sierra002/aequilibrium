@@ -1,1 +1,53 @@
-<p>add-transformer works!</p>
+<div class="addTransformer">
+  <form [formGroup]="form">
+    <div class="name">
+      <h1>Add transformer</h1>
+      <h3>
+        Name:
+      </h3>
+      <input formControlName="name">
+    </div>
+    <div class="attributes">
+      <div>
+        <label>
+          Strength
+          <input type="text" formControlName="strength">
+        </label>
+        <label>
+          Intelligence
+          <input type="text" formControlName="intelligence">
+        </label>
+        <label>
+          Speed
+          <input type="text" formControlName="speed">
+        </label>
+        <label>
+          Endurance
+          <input type="text" formControlName="endurance">
+        </label>
+      </div>
+      <div>
+        <label>
+          Rank
+          <input type="text" formControlName="rank">
+        </label>
+        <label>
+          Courage
+          <input type="text" formControlName="courage">
+        </label>
+        <label>
+          Firepower
+          <input type="text" formControlName="firePower">
+        </label>
+        <label>
+          Skill
+          <input type="text" formControlName="skill">
+        </label>
+      </div>
+    </div>
+    <div class="buttons">
+      <button type="submit" (click)="save('autobot')">Save Autobot</button>
+      <button type="submit" (click)="save('decepticon')">Save decepticon</button>
+    </div>
+  </form>
+</div>

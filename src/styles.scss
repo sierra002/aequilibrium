@@ -11,7 +11,8 @@ button {
   background-color: $clearCian;
   border: 1px solid $clearCian;
   padding: 10px;
-  border-radius: $borderRadius;
+  // bootstrap added a style reboot
+  border-radius: $borderRadius !important;
   color: white;
   min-width: 150px;
   &:focus {
@@ -50,3 +51,6 @@ input {
   color: $error;
   margin-bottom: 15px;
 }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';

@@ -99,7 +99,7 @@ export class TransformerService {
   private specialRulesValidation(a: Transformer, b: Transformer): boolean {
     const {aName, bName} = {aName: a.name.toLowerCase(), bName: b.name.toLowerCase()};
     if (specialNames[aName] && specialNames[bName]) {
-      throw new Error('All competitors destroyed');
+      throw new Error('All competitors were destroyed');
     }
     if (specialNames[aName]) {
       return true;

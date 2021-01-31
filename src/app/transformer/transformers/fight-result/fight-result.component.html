@@ -1,0 +1,17 @@
+<div class="fightResultComponent">
+  <div>
+    {{title}}
+  </div>
+  <div>
+    Autobots
+    <label *ngFor="let autobot of results.autobots">
+      {{autobot.name}}
+    </label>
+  </div>
+  <div>
+    decepticons
+    <label *ngFor="let decepticon of results.decepticons">
+      {{decepticon.name}}
+    </label>
+  </div>
+</div>
