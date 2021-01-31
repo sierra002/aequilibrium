@@ -38,7 +38,7 @@ export class CastleService {
     return result;
   }
 
-  searchInTheArray(array, result) {
+  private searchInTheArray(array, result) {
     array.forEach((value, index, array) => {
       if (array.length === 1) {
         result.pick++;

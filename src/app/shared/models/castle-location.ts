@@ -1,4 +1,4 @@
 export interface CastleLocation {
-  peak: number,
-  valley: number
+  peak: number;
+  valley: number;
 }

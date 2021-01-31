@@ -1,6 +1,6 @@
-import {AbstractControl, ValidationErrors} from "@angular/forms";
+import {AbstractControl, ValidationErrors} from '@angular/forms';
 
-const arrayError = 'Input received is not an array'
+const arrayError = 'Input received is not an array';
 
 export class FormValidators {
 
@@ -10,9 +10,9 @@ export class FormValidators {
       if (Array.isArray(value)) {
         return null;
       }
-      return {error: arrayError}
+      return {error: arrayError};
     } catch (e) {
-      return {error: arrayError}
+      return {error: arrayError};
     }
   }
 }

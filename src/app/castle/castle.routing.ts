@@ -1,6 +1,6 @@
-import {RouterModule, Routes} from "@angular/router";
-import {NgModule} from "@angular/core";
-import {CastlesComponent} from "./castles/castles.component";
+import {RouterModule, Routes} from '@angular/router';
+import {NgModule} from '@angular/core';
+import {CastlesComponent} from './castles/castles.component';
 
 const routes: Routes = [
   {
