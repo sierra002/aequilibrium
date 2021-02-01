@@ -39,7 +39,6 @@ export class TransformersComponent implements OnInit {
     this.hideFightStats = false;
     try {
       this.fightResults = this.transformerService.transformerBattle(this.autobots, this.decepticons);
-      console.log(this.fightResults);
       const winners = this.fightResults.winners;
 
       if (winners.autobots.length > winners.decepticons.length) {
